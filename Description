@@ -1,0 +1,10 @@
+Analyst Name - CortexInsight
+Description - Cortex Insight is a Snowflake-powered analytics assistant that leverages semantic models to unify supplier, material, certification, and performance data. It enables procurement leaders to derive actionable insights, assess supplier reliability, and drive data-backed sourcing decisions through a single intelligent interface.
+
+
+Agent- Procurement Analytics Intelligence
+Description - A centralized Snowflake-powered intelligence layer that unifies supplier, vendor, material, and certification data to deliver actionable insights for procurement teams. SPI enables users to analyze supplier performance, compliance, sourcing efficiency, and certification status through a trusted semantic view.
+
+
+Custom tool (Streamlit App)
+This Python-based stored procedure enables users to automatically generate and deploy Streamlit applications within the Snowflake environment by simply providing a description and relevant SQL queries as input. Designed for business analysts and data teams, it interprets the user’s requirements, constructs a prompt for an AI model, and orchestrates the creation of a ready-to-use Streamlit app that visualizes data using only the supplied SQL sources. 
