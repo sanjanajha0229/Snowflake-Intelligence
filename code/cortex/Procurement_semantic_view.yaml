@@ -10,8 +10,8 @@ tables:
   - name: COMMODITY_PRICE_FERTILIZER
     description: This table stores historical and forecasted prices for various fertilizers, including actual market prices for 2021-2025 and projected prices for specific quarters in 2024 and 2025, along with the units of measurement for each commodity.
     base_table:
-      database: SNOWFLAKE_INTELLIGENCE_DB
-      schema: PROCUREMENT_DATASET
+      database: CAPCHEM_INTELLIGENCE
+      schema: PROCUREMENT
       table: COMMODITY_PRICE_FERTILIZER
     dimensions:
       - name: COMMODITIES
@@ -98,8 +98,8 @@ tables:
   - name: GLOBAL_CERTIFICATION
     description: This table stores a list of global certifications, with each certification uniquely identified by a global certification ID and described by a certification name.
     base_table:
-      database: SNOWFLAKE_INTELLIGENCE_DB
-      schema: PROCUREMENT_DATASET
+      database: CAPCHEM_INTELLIGENCE
+      schema: PROCUREMENT
       table: GLOBAL_CERTIFICATION
     dimensions:
       - name: GLOBAL_CERTIFICATION_ID
@@ -121,8 +121,8 @@ tables:
   - name: GLOBAL_MATERIAL
     description: This table stores information about materials used globally across an organization, with each record representing a unique material. The table captures the material's identifier, name, and type, providing a centralized repository for material data that can be referenced across various business processes and systems.
     base_table:
-      database: SNOWFLAKE_INTELLIGENCE_DB
-      schema: PROCUREMENT_DATASET
+      database: CAPCHEM_INTELLIGENCE
+      schema: PROCUREMENT
       table: GLOBAL_MATERIAL
     dimensions:
       - name: GLOBAL_MATERIAL_ID
@@ -155,8 +155,8 @@ tables:
   - name: GLOBAL_SUPPLIER
     description: This table stores information about global suppliers, including their identification, contact details, lead time, reliability score, trade restrictions, and capacity, as well as an indicator of whether they are an existing vendor for CapChem.
     base_table:
-      database: SNOWFLAKE_INTELLIGENCE_DB
-      schema: PROCUREMENT_DATASET
+      database: CAPCHEM_INTELLIGENCE
+      schema: PROCUREMENT
       table: GLOBAL_SUPPLIER
     dimensions:
       - name: GLOBAL_SUPPLIER_ADDRESS
@@ -263,8 +263,8 @@ tables:
   - name: MATERIAL_SUPPLIER
     description: This table stores information about the suppliers of various materials, linking each material to its corresponding supplier, allowing for easy tracking and management of material sourcing.
     base_table:
-      database: SNOWFLAKE_INTELLIGENCE_DB
-      schema: PROCUREMENT_DATASET
+      database: CAPCHEM_INTELLIGENCE
+      schema: PROCUREMENT
       table: MATERIAL_SUPPLIER
     dimensions:
       - name: GLOBAL_MATERIAL_ID
@@ -316,8 +316,8 @@ tables:
   - name: PRICE_SPECIFICATIONS
     description: This table stores price specifications for various fertilizers, including their corresponding world export weights for the years 2014-2026, along with the unit of measurement for each price specification.
     base_table:
-      database: SNOWFLAKE_INTELLIGENCE_DB
-      schema: PROCUREMENT_DATASET
+      database: CAPCHEM_INTELLIGENCE
+      schema: PROCUREMENT
       table: PRICE_SPECIFICATIONS
     dimensions:
       - name: FERTILIZERS
@@ -359,8 +359,8 @@ tables:
   - name: PURCHASE_ORDERS
     description: This table stores information about purchase orders made by a company, including details about the vendor, raw materials purchased, quantities, prices, and dates, allowing for tracking and analysis of procurement activities.
     base_table:
-      database: SNOWFLAKE_INTELLIGENCE_DB
-      schema: PROCUREMENT_DATASET
+      database: CAPCHEM_INTELLIGENCE
+      schema: PROCUREMENT
       table: PURCHASE_ORDERS
     dimensions:
       - name: CAPCHEM_RAW_MATERIAL_CATEGORY
@@ -457,8 +457,8 @@ tables:
   - name: RAW_MATERIAL
     description: This table stores information about raw materials used by the company, including a unique identifier, global material ID, name, and category, to track and manage raw materials across different systems and locations.
     base_table:
-      database: SNOWFLAKE_INTELLIGENCE_DB
-      schema: PROCUREMENT_DATASET
+      database: CAPCHEM_INTELLIGENCE
+      schema: PROCUREMENT
       table: RAW_MATERIAL
     dimensions:
       - name: CAPCHEM_RAW_MATERIAL_CATEGORY
@@ -499,8 +499,8 @@ tables:
   - name: SUPPLIER_CERTIFICATIONS
     description: This table stores information about certifications held by suppliers, linking each supplier to their respective certifications, and providing the names of both the supplier and the certification for reference.
     base_table:
-      database: SNOWFLAKE_INTELLIGENCE_DB
-      schema: PROCUREMENT_DATASET
+      database: CAPCHEM_INTELLIGENCE
+      schema: PROCUREMENT
       table: SUPPLIER_CERTIFICATIONS
     dimensions:
       - name: GLOBAL_CERTIFICATION_ID
@@ -544,8 +544,8 @@ tables:
   - name: SUPPLIER_CONTRACTS
     description: This table stores information about contracts between a company and its suppliers, including supplier details, contract terms, and payment information.
     base_table:
-      database: SNOWFLAKE_INTELLIGENCE_DB
-      schema: PROCUREMENT_DATASET
+      database: CAPCHEM_INTELLIGENCE
+      schema: PROCUREMENT
       table: SUPPLIER_CONTRACTS
     dimensions:
       - name: CONTRACT_ID
@@ -734,8 +734,8 @@ tables:
   - name: VENDOR
     description: This table stores information about vendors, including a unique identifier specific to CapChem, a global supplier identifier, and the vendor's name.
     base_table:
-      database: SNOWFLAKE_INTELLIGENCE_DB
-      schema: PROCUREMENT_DATASET
+      database: CAPCHEM_INTELLIGENCE
+      schema: PROCUREMENT
       table: VENDOR
     dimensions:
       - name: CAPCHEM_VENDOR_ID
@@ -771,8 +771,8 @@ tables:
   - name: VENDOR_PERFORM
     description: This table stores historical performance metrics for vendors, capturing their on-time delivery, full performance, quality scores, pricing competitiveness, payment terms, and contingency support over the last 5 years, as well as a composite supplier performance score.
     base_table:
-      database: SNOWFLAKE_INTELLIGENCE_DB
-      schema: PROCUREMENT_DATASET
+      database: CAPCHEM_INTELLIGENCE
+      schema: PROCUREMENT
       table: VENDOR_PERFORM
     dimensions:
       - name: CAPCHEM_VENDOR_ID
